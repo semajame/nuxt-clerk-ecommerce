@@ -1,4 +1,13 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "components/*": ["@/components/ui"],
+      "utils/*": ["@/lib/utils/*"]
+    }
+  },
   "extends": "./.nuxt/tsconfig.json"
 }
