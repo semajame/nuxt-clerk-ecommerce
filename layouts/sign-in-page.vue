@@ -15,5 +15,5 @@
 </template>
 
 <script setup>
-definePageMeta({ middleware: 'guest', layout: 'sign-in-page' })
+definePageMeta({ middleware: 'guest' })
 </script>

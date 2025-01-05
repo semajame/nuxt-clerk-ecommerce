@@ -9,6 +9,7 @@
           alt="Logo Image"
           densities="x1"
           format="webp"
+          class="logo"
         />
       </NuxtLink>
     </div>
@@ -33,7 +34,10 @@
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Cart</DialogTitle>
+              <DialogTitle
+                >Cart{{ user.value.firstName }}
+                {{ user.value.lastName }}</DialogTitle
+              >
               <DialogDescription>
                 Make changes to your profile here. Click save when you're done.
               </DialogDescription>
@@ -108,26 +112,15 @@
     <!-- Desktop Cart and User Button -->
     <div class="hidden md:flex gap-5 items-center">
       <SignedOut>
-        <SignInButton
+        <NuxtLink
+          to="/sign-in"
           class="px-4 py-2 rounded-full bg-[#131316] text-white text-sm font-semibold"
         >
           <Icon name="uil:cart" size="1.5em" class="cursor-pointer" />
-        </SignInButton>
+        </NuxtLink>
       </SignedOut>
       <SignedIn>
-        <Dialog>
-          <DialogTrigger>
-            <Icon name="uil:cart" size="1.5em" class="cursor-pointer" />
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle class="tracking-wide">Cart</DialogTitle>
-              <DialogDescription class="tracking-wide">
-                Make changes to your profile here. Click save when you're done.
-              </DialogDescription>
-            </DialogHeader>
-          </DialogContent>
-        </Dialog>
+        <UserDetails />
       </SignedIn>
 
       <UserButton
@@ -166,3 +159,10 @@ watchEffect(() => {
   }
 })
 </script>
+
+<style scoped>
+.logo {
+  width: 120px; /* Adjust as needed */
+  height: auto; /* Maintains aspect ratio */
+}
+</style>
