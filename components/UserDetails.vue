@@ -7,10 +7,13 @@
       <DialogContent>
         <DialogHeader>
           <DialogTitle class="tracking-wide">
-            Cart {{ user.firstName }} {{ user.lastName }}
+            Cart
+            <span class="text-gray-500 text-xs"
+              >{{ user?.firstName }} {{ user?.lastName }}</span
+            >
           </DialogTitle>
-          <DialogDescription class="tracking-wide">
-            Make changes to your profile here. Click save when you're done.
+          <DialogDescription class="tracking-wide mt-5">
+            Your Cart is Empty.
           </DialogDescription>
         </DialogHeader>
       </DialogContent>
@@ -19,6 +22,8 @@
 </template>
 
 <script setup>
-const { user } = useUser() // Nuxt composable for user management
-const { session } = useSession() // Nuxt composable for session management
+defineProps({
+  user: Object,
+  session: Object,
+})
 </script>

@@ -120,7 +120,7 @@
         </NuxtLink>
       </SignedOut>
       <SignedIn>
-        <UserDetails />
+        <UserDetails :user="user" :session="session" />
       </SignedIn>
 
       <UserButton
@@ -136,6 +136,9 @@
 </template>
 
 <script setup>
+const { user } = useUser()
+const { session } = useSession()
+
 const isMenuOpen = ref(false)
 
 const navLinks = [
