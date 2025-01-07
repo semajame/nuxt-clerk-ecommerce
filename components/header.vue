@@ -5,10 +5,12 @@
     <div>
       <NuxtLink to="/">
         <NuxtImg
-          src="https://cdn.prod.website-files.com/63de71ba2edc49315eb29625/63de868edd106636841b2c2c_habitat-logo.svg"
+          src="https://lacoste.com.ph/media/logo/websites/1/Initial_Lacoste_Logo-svg_2.svg"
           alt="Logo Image"
           densities="x1"
           format="webp"
+          width="262"
+          height="43"
           class="logo"
         />
       </NuxtLink>
@@ -59,8 +61,21 @@
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden md:block">
-      <ul class="flex gap-8 items-center">
+    <nav class="hidden md:block w-1/2">
+      <div class="relative w-full items-center">
+        <Input
+          id="search"
+          type="text"
+          placeholder="Find a product..."
+          class="pl-10 rounded-full bg-gray-200 outline-none"
+        />
+        <span
+          class="absolute start-0 inset-y-0 flex items-center justify-center px-2"
+        >
+          <Search class="size-5 text-muted-foreground" />
+        </span>
+      </div>
+      <!-- <ul class="flex gap-8 items-center">
         <li>
           <NuxtLink to="/fish" class="font-semibold text-sm tracking-wide"
             >Fish</NuxtLink
@@ -89,7 +104,7 @@
             >Shop</NuxtLink
           >
         </li>
-      </ul>
+      </ul> -->
     </nav>
 
     <!-- Mobile Navigation Overlay -->
@@ -112,12 +127,11 @@
     <!-- Desktop Cart and User Button -->
     <div class="hidden md:flex gap-5 items-center">
       <SignedOut>
-        <NuxtLink
-          to="/sign-in"
-          class="px-4 py-2 rounded-full bg-[#131316] text-white text-sm font-semibold"
+        <SignInButton
+          class="px-4 py-2 rounded-full text-white text-sm font-semibold cursor-pointer"
         >
-          <Icon name="uil:cart" size="1.5em" class="cursor-pointer" />
-        </NuxtLink>
+          <NuxtImg src="/cart.svg" densities="x1" />
+        </SignInButton>
       </SignedOut>
       <SignedIn>
         <UserDetails :user="user" :session="session" />
@@ -130,12 +144,16 @@
           },
         }"
         default-open
+        showName
       />
     </div>
   </header>
 </template>
 
 <script setup>
+import { Input } from '@/components/ui/input'
+import { Search } from 'lucide-vue-next'
+
 const { user } = useUser()
 const { session } = useSession()
 
@@ -162,10 +180,3 @@ watchEffect(() => {
   }
 })
 </script>
-
-<style scoped>
-.logo {
-  width: 120px; /* Adjust as needed */
-  height: auto; /* Maintains aspect ratio */
-}
-</style>

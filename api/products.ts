@@ -1,0 +1,58 @@
+export const BAGS = [
+  {
+    id: 1,
+    title: 'Large Heritage Print Jacquard Tote',
+    image: '/bags/jacquard.png',
+    price: ref(11250.0),
+    quantity: 1,
+  },
+  {
+    id: 2,
+    title: 'Zely Tote with Removable Pouch',
+    image: '/bags/zely.png',
+    price: ref(8950.0),
+    quantity: 1,
+  },
+  {
+    id: 3,
+    title: 'Concept Striped Tote',
+    image: '/bags/striped.png',
+    price: ref(7450.0),
+    quantity: 1,
+  },
+  {
+    id: 4,
+    title: 'Small Zipped Tote',
+    image: '/bags/zipped.webp',
+    price: ref(5450.0),
+    quantity: 1,
+  },
+  {
+    id: 5,
+    title: 'Anna Zipped Shopping Bag',
+    image: '/bags/anna.jpg',
+    price: ref(8250.0),
+    quantity: 1,
+  },
+  {
+    id: 6,
+    title: 'Concept Large Tote',
+    image: '/bags/concept.webp',
+    price: ref(5950.0),
+    quantity: 1,
+  },
+  {
+    id: 7,
+    title: 'Zely Tote with Removable Pouch',
+    image: '/bags/zely-tote.webp',
+    price: ref(29.99),
+    quantity: 1,
+  },
+  {
+    id: 8,
+    title: 'Anna Zipped Shopping Bag',
+    image: '/bags/blac-anna.jpg',
+    price: ref(8540.0),
+    quantity: 1,
+  },
+]

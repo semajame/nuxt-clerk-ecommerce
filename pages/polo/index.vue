@@ -6,11 +6,11 @@
 
 <script setup>
 useHead({
-  title: 'Plants - Habitat Ecommerce',
+  title: 'Plants - Lacoste Ecommerce',
   meta: [
     {
       name: 'description',
-      content: 'Habitat Ecommerce plants market page.',
+      content: 'Lacoste Ecommerce plants market page.',
     },
   ],
 })

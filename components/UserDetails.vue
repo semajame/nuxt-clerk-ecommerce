@@ -2,7 +2,7 @@
   <div v-if="user && session">
     <Dialog>
       <DialogTrigger>
-        <Icon name="uil:cart" size="1.5em" class="cursor-pointer" />
+        <NuxtImg src="/cart.svg" densities="x1" class="cursor-pointer" />
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

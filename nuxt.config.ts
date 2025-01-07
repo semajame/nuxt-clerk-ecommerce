@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     'vue-clerk/nuxt',
-    '@clerk/nuxt',
     'shadcn-nuxt',
     '@nuxtjs/color-mode',
   ],
@@ -29,7 +28,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       // List the fonts you want here
-      Inter: true, // All weights of Inter
+      Archivo: true, // All weights of Inter
       Manrope: true, // All weights for Lora
     },
 
@@ -64,11 +63,11 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Home - Habitat Ecommerce',
+      title: 'Home - Lacoste Ecommerce',
       meta: [
         {
           name: 'description',
-          content: 'Habitat Ecommerce home page.',
+          content: 'Lacoste Ecommerce home page.',
         },
       ],
 

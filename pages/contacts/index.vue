@@ -6,11 +6,11 @@
 
 <script setup>
 useHead({
-  title: 'Contacts - Habitat Ecommerce',
+  title: 'Contacts - Lacoste Ecommerce',
   meta: [
     {
       name: 'description',
-      content: 'Habitat Ecommerce contact page.',
+      content: 'Lacoste Ecommerce contact page.',
     },
   ],
 })

@@ -73,7 +73,7 @@
     @apply border-border;
   }
   body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Archivo', sans-serif;
     @apply bg-background text-foreground;
   }
 }
